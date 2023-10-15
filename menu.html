@@ -44,6 +44,8 @@
 
     <!-- w3 school -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <script type="module" scr="js/3js__main.js"></script>
   </head>
 
   <body>
@@ -321,12 +323,7 @@
                         >
                           <span>Chicken Burger</span>
                           <!-- <span class="text-primary">$115</span> -->
-                          <button
-                            class="eye"
-                            onclick="document.getElementById('id01').style.display='block'"
-                          >
-                            &#128065;
-                          </button>
+                          <button class="eye">&#128065;</button>
                         </h5>
                         <small class="fst-italic"
                           >Ipsum ipsum clita erat amet dolor justo diam</small
@@ -348,12 +345,9 @@
                         >
                           <span>Papad</span>
                           <!-- <span class="text-primary">$115</span> -->
-                          <button
-                            class="eye"
-                            onclick="handleModelShow('papad')"
-                          >
-                            &#128065;
-                          </button>
+                          <a href="render.html?obj=papad">
+                            <button class="eye">&#128065;</button>
+                          </a>
                         </h5>
                         <small class="fst-italic"
                           >Ipsum ipsum clita erat amet dolor justo diam</small
@@ -674,7 +668,7 @@
         > -->
       </div>
     </div>
-    <script type="module" src="js/3js_main.js"></script>
+    <script type="module" src="./js/3js_main.js"></script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -690,12 +684,12 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script scr="js/3js__main.js">
+    <!-- <script scr="js/3js__main.js">
       function handleModelShow(e) {
         document.getElementById("id01").style.display = "block";
         itemSelected = e;
         console.log(itemSelected);
       }
-    </script>
+    </script> -->
   </body>
 </html>

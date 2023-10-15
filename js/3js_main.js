@@ -28,29 +28,30 @@ let object;
 //OrbitControls allow the camera to move around the scene
 let controls;
 
-let itemSelected;
-
-// function handleModelShow(e) {
-//   document.getElementById("id01").style.display = "block";
-//   console.log(e);
-//   itemSelected = e;
-//   console.log(itemSelected);
-// }
-
 //Set which object to render
-let objToRender = {
+let objToRenderPath = {
   papad: `models/textured_mesh_glb.glb`,
   laddu: `models/laddu.glb`,
   fried_gavar: `models/fried_gavar.glb`,
   pumpkin: `models/pumkin.glb`,
 };
 
+// get parameter from the url
+console.log("PLease work");
+
+const queryString = window.location.search;
+console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+console.log(urlParams);
+const objToRender = urlParams.get("obj");
+console.log(objToRender);
+
 //Instantiate a loader for the .gltf file
 const loader = new GLTFLoader();
 
 //Load the file
 loader.load(
-  objToRender[itemSelected],
+  objToRenderPath[objToRender],
   function (gltf) {
     //If the file is loaded, add it to the scene
     object = gltf.scene;
