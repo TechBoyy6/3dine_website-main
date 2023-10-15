@@ -36,22 +36,15 @@ let objToRenderPath = {
   pumpkin: `models/pumkin.glb`,
 };
 
-// get parameter from the url
-console.log("PLease work");
-
-const queryString = window.location.search;
-console.log(queryString);
-const urlParams = new URLSearchParams(queryString);
-console.log(urlParams);
-const objToRender = urlParams.get("obj");
-console.log(objToRender);
+// let ariaLabelPath = document.getElementById("container3D").ariaLabel;
+// console.log(ariaLabelPath);
 
 //Instantiate a loader for the .gltf file
 const loader = new GLTFLoader();
 
 //Load the file
 loader.load(
-  objToRenderPath[objToRender],
+  objToRenderPath.pumpkin,
   function (gltf) {
     //If the file is loaded, add it to the scene
     object = gltf.scene;

@@ -1,42 +1,21 @@
-let objToRender = {
-  papad: `models/textured_mesh_glb.glb`,
-  laddu: `models/laddu.glb`,
-  fried_gavar: `models/fried_gavar.glb`,
-  pumpkin: `models/pumkin.glb`,
-};
+// let objToRender = {
+//   papad: `models/textured_mesh_glb.glb`,
+//   laddu: `models/laddu.glb`,
+//   fried_gavar: `models/fried_gavar.glb`,
+//   pumpkin: `models/pumkin.glb`,
+// };
 
-let selectedItem = "";
+// var selectedItem = "";
 
-var items = document.getElementsByClassName("eye");
-for (let i = 0; i < items.length; i++) {
-  // items[i].addEventListener("click", function () {
-  //     document.getElementById("id01").style.display = "block";
-  //     itemSelected = Object.keys(objToRender)[i];
-  //     console.log(itemSelected);
-  //     //Instantiate a loader for the .gltf file
-  //     const loader = new GLTFLoader();
-
-  //     //Load the file
-  //     loader.load(
-  //     objToRender[itemSelected],
-  //     function (gltf) {
-  //         //If the file is loaded, add it to the scene
-  //         object = gltf.scene;
-  //         scene.add(object);
-  //     },
-  //     function (xhr) {
-  //         console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-  //     },
-  //     function (error) {
-  //         console.log("An error happened");
-  //     }
-  //     );
-  // });
-  items[i].addEventListener("click", function () {
-    selectedItem = Object.values(objToRender)[i];
-    document.getElementById("id01").style.display = "block";
-  });
-}
+// var items = document.getElementsByClassName("eye");
+// for (let i = 0; i < items.length; i++) {
+//   items[i].addEventListener("click", function () {
+//     selectedItem = Object.values(objToRender)[i];
+//     document.getElementById("id01").style.display = "block";
+//     console.log(selectedItem);
+//     document.getElementById("container3D").ariaLabel = selectedItem;
+//   });
+// }
 
 (function ($) {
   "use strict";
